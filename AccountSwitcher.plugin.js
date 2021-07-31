@@ -325,7 +325,10 @@ module.exports = (() => {
 						this.settings.pluginsToRestart.forEach(pl => {
 							if(BdApi.Plugins.isEnabled(pl)){
 								BdApi.Plugins.disable(pl);
-								window.setTimeout(()=>BdApi.Plugins.enable(pl), 5000);
+								window.setTimeout(()=>{
+									BdApi.Plugins.reload(pl)
+									BdApi.Plugins.enable(pl)
+								}, 5000);
 							}
 						});
 					});
