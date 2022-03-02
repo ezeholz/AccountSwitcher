@@ -114,7 +114,7 @@ module.exports = (() => {
 					}
 				);
 			}
-			
+			/*
 			const KeyRecorder = class KeyRecorder extends WebpackModules.getByDisplayName("KeyRecorder") {
 				render() {
 					const ButtonOptions = WebpackModules.getByProps("ButtonLink");
@@ -167,7 +167,7 @@ module.exports = (() => {
 						onRemove
 					});
 				}
-			};
+			};*/
 			return class AccountSwitcher extends Plugin {
 				updateAvatars(){
 					this.settings.accounts.forEach(acc => {
